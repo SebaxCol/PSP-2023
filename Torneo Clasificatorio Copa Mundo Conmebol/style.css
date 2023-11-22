@@ -86,7 +86,20 @@ table{
 }
 
 th, td {
-    padding: 15px;
+    padding: 10px;
     text-align: center;
-    background-color: #D8FFDD;
+    background-color: #BAE0BF;
+    vertical-align: middle;
   }
+
+th {
+    background-color: #6EB477;
+}
+
+tr:nth-child(even) td  {
+    background-color: #D8FFDD;
+}
+
+tr:hover td{
+    background-color: #59656F;
+}
