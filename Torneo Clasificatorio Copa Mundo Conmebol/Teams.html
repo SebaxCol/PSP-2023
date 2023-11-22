@@ -1,0 +1,46 @@
+<html></html>
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partidos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image.png" href="images/Favicon.png">
+</head>
+
+
+<body>
+    <h1>Equipos</h1>
+
+    <div class="Buttons Container"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var teams = [
+                {name:'Argentina', flagref:'images/ArgentinaFlag.png', ref:""},
+            ]
+        
+
+        var buttonsContainer = document.getElementsByClassName('Buttons Container')[0];
+        buttonsContainer.style.display = 'flex';
+        buttonsContainer.style.justifyContent = 'center';
+        buttonsContainer.style.marginTop = '100px';
+
+        teams.forEach(function(team){
+                var buttonDiv = document.createElement('div');
+                buttonDiv.style.margin = '100px';
+                buttonDiv.classList.add('button');
+                buttonDiv.innerHTML= `
+                <button onclick="location.href = '${team.ref}';" class="teamsbuttons"> <img src=${team.flagref}> <br/> <br/> <br/> ${team.name} </button>
+                `;
+                buttonsContainer.appendChild(buttonDiv);
+            });
+        });
+
+
+    </script>
+
+</body>

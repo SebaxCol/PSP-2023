@@ -1,0 +1,45 @@
+<html></html>
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneo Clasificatorio Conmebol</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image.png" href="images/Favicon.png">
+</head>
+
+<body>
+    <h1>Torneo Clasificatorio Copa Mundo Conmebol</h1>
+
+    <div class="Buttons Container"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var buttons = [
+                {name: 'Partidos', ref:'Games.html', imageref:"images/favicon.png"},
+                {name: 'Equipos', ref:'Teams.html', imageref:"images/SouthAmericaMap.png"},
+                {name: 'Clasificacion', ref:'', imageref:"images/ConmebolLogo.png"},
+            ];
+
+            var buttonsContainer = document.getElementsByClassName('Buttons Container')[0];
+            buttonsContainer.style.display = 'flex';
+            buttonsContainer.style.justifyContent = 'center';
+            buttonsContainer.style.marginTop = '100px';
+
+            buttons.forEach(function(button){
+                var buttonDiv = document.createElement('div');
+                buttonDiv.style.margin = '100px';
+                buttonDiv.classList.add('button');
+                buttonDiv.innerHTML= `
+                <button onclick="location.href = '${button.ref}';" class="mainbuttons"> <img src=${button.imageref}> <br/> <br/> <br/> ${button.name} </button>
+                `;
+                buttonsContainer.appendChild(buttonDiv);
+            });
+
+        });
+    </script>
+
+</body>

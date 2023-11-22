@@ -1,0 +1,53 @@
+<html></html>
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partidos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image.png" href="images/Favicon.png">
+</head>
+
+
+<body>
+    <h1>Partidos Clasificatorio Copa Mundo CONMEBOL</h1>
+
+    <div id="partidos-container"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var partidos = [
+                { equipo1: 'Colombia', equipo2: 'Uruguay', fecha: '2023-10-12', hora: '15:30' },
+                { equipo1: 'Bolivia', equipo2: 'Ecuador', fecha: '2023-10-12', hora: '19:00' },
+                { equipo1: 'Argentina', equipo2: 'Paraguay', fecha: '2023-10-12', hora: '20:00' },
+                { equipo1: 'Brasil', equipo2: 'Venezuela', fecha: '2023-10-12', hora: '20:30' },
+                { equipo1: 'Chile', equipo2: 'Peru', fecha: '2023-10-12', hora: '21:00' },
+                
+            ];
+
+            function formatearFechaHora(fecha, hora) {
+                var opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true };
+                var fechaHora = new Date(fecha + ' ' + hora);
+                return fechaHora.toLocaleDateString('es-ES', opciones);
+            }
+
+            var partidosContainer = document.getElementById('partidos-container');
+
+            partidos.forEach(function(partido) {
+                var partidoDiv = document.createElement('div');
+                partidoDiv.classList.add('partido');
+                partidoDiv.innerHTML = `
+                    <h3>${partido.equipo1} vs ${partido.equipo2}</h3>
+                    <p>Fecha y Hora: ${formatearFechaHora(partido.fecha, partido.hora)}</p>
+                `;
+                partidosContainer.appendChild(partidoDiv);
+            });
+        });
+    </script>
+</body>
+
+
+</html>

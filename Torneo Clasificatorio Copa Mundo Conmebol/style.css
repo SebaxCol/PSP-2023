@@ -1,0 +1,79 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #3F893F;
+}
+
+#partidos-container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #d9ff02;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.partido {
+    border: 1px solid #3F893F;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 3em;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.mainbuttons {
+    background-color: #D8FFDD;
+    color: black;
+    border: solid black;
+    padding: 50px 50px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 19px;
+  }
+
+.mainbuttons:hover {
+    transform: scale(1.1);
+}
+
+.mainbuttons:active{
+    background-color: #B3D3B7;
+}
+
+.teamsbuttons {
+    background-color: #D8FFDD;
+    color: black;
+    border: solid black;
+    padding: 30px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 19px;
+  }
+
+.teamsbuttons:hover {
+    transform: scale(1.1);
+}
+
+.teamsbuttons:active{
+    background-color: #B3D3B7;
+}
