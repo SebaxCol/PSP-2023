@@ -77,3 +77,16 @@ a:hover {
 .teamsbuttons:active{
     background-color: #B3D3B7;
 }
+
+table{
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    background-color: #D8FFDD;
+  }
