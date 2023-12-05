@@ -1,0 +1,62 @@
+<html></html>
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partidos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image.png" href="Images/Favicon.png">
+</head>
+
+
+<body>
+    <h1>Team_Name</h1>
+
+    <div class="MenuContainer"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            var menuButtons = [
+                {name: 'Menu Principal', ref:'Index.html'},
+                {name: 'Partidos', ref:'Games.html'},
+                {name: 'Equipos', ref:'Teams.html'},
+                {name: 'Clasificacion', ref:'Table.html'},
+            ];
+            var menuContainer = document.getElementsByClassName('MenuContainer')[0];
+            menuContainer.style.display = 'flex';
+            menuContainer.style.justifyContent = 'center';
+
+            menuButtons.forEach(function(menuBut){
+                var menuDiv = document.createElement('div');
+                menuDiv.style.margin = '20px';
+                menuDiv.classList.add('button');
+                menuDiv.innerHTML=`
+                <button onclick = "location.href = '${menuBut.ref}';" class="menuButtons"> ${menuBut.name} </button>
+                `;
+                menuContainer.appendChild(menuDiv);
+            });
+        });
+    </script>
+
+    <div style="display: flex;margin: 10%;">
+        <img src="images/ArgentinaLogo.png" width="500" height="500">
+        <div style="flex: 1;">
+            <table border="0.5" style="font-size:25px;font-weight: bold;width:80% ;">
+                <tr>
+                    <th>Jugador</th>
+                    <th>Posicion</th>
+                </tr>
+                <tr>
+                    <td>  </td>
+                    <td>  </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+</body>
