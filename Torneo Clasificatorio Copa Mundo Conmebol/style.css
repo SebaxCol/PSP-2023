@@ -106,7 +106,7 @@ tr:nth-child(even) td  {
 }
 
 tr:hover td{
-    background-color: #59656F;
+    background-color: #3F893F;
 }
 
 
@@ -142,4 +142,13 @@ tr:hover td{
 
 .menubuttons:active{
     background-color: #B3D3B7;
+}
+
+.buttonsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; 
+    justify-content: space-around; 
+    padding: 10px; 
+    box-sizing: border-box; 
 }

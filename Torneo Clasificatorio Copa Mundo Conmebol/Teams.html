@@ -17,7 +17,7 @@
 
     <div class="MenuContainer"></div>
 
-    <div class="Buttons Container"></div>
+    <div class="buttonsContainer"></div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -43,10 +43,21 @@
 
             var teams = [
                 {name:'Argentina', flagref:'images/ArgentinaFlag.png', ref:""},
+                {name:'Bolivia', flagref:'images/BoliviaFlag.png', ref:""},
+                {name:'Brazil', flagref:'images/BrazilFlag.png', ref:""},
+                {name:'Chile', flagref:'images/ChileFlag.png', ref:""},
+                {name:'Colombia', flagref:'images/ColombiaFlag.png', ref:""},
+                {name:'Ecuador', flagref:'images/EcuadorFlag.png', ref:""},
+                {name:'Paraguay', flagref:'images/ParaguayFlag.png', ref:""},
+                {name:'Peru', flagref:'images/PeruFlag.png', ref:""},
+                {name:'Uruguay', flagref:'images/UruguayFlag.png', ref:""},
+                {name:'Venezuela', flagref:'images/VenezuelaFlag.png', ref:""},
+
+
             ]
         
 
-        var buttonsContainer = document.getElementsByClassName('Buttons Container')[0];
+        var buttonsContainer = document.getElementsByClassName('buttonsContainer')[0];
         buttonsContainer.style.display = 'flex';
         buttonsContainer.style.justifyContent = 'center';
         buttonsContainer.style.marginTop = '100px';
