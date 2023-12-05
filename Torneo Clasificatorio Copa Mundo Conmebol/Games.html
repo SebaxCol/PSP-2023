@@ -15,10 +15,34 @@
 <body>
     <h1>Partidos Clasificatorio Copa Mundo CONMEBOL</h1>
 
+    <div class="MenuContainer"></div>
+
     <div id="partidos-container"></div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+
+            var menuButtons = [
+                {name: 'Menu Principal', ref:'Index.html'},
+                {name: 'Equipos', ref:'Teams.html'},
+                {name: 'Clasificacion', ref:'Table.html'},
+            ];
+            var menuContainer = document.getElementsByClassName('MenuContainer')[0];
+            menuContainer.style.display = 'flex';
+            menuContainer.style.justifyContent = 'center';
+
+            menuButtons.forEach(function(menuBut){
+                var menuDiv = document.createElement('div');
+                menuDiv.style.margin = '20px';
+                menuDiv.classList.add('button');
+                menuDiv.innerHTML=`
+                <button onclick = "location.href = '${menuBut.ref}';" class="menuButtons"> ${menuBut.name} </button>
+                `;
+                menuContainer.appendChild(menuDiv);
+            });    
+
+
+
             var partidos = [
                 { equipo1: 'Colombia', equipo2: 'Uruguay', fecha: '2023-10-12', hora: '15:30' },
                 { equipo1: 'Bolivia', equipo2: 'Ecuador', fecha: '2023-10-12', hora: '19:00' },

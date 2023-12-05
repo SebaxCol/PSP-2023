@@ -15,10 +15,32 @@
 <body>
     <h1>Equipos</h1>
 
+    <div class="MenuContainer"></div>
+
     <div class="Buttons Container"></div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+
+            var menuButtons = [
+                {name: 'Menu Principal', ref:'Index.html'},
+                {name: 'Partidos', ref:'Games.html'},
+                {name: 'Clasificacion', ref:'Table.html'},   
+            ];
+            var menuContainer = document.getElementsByClassName('MenuContainer')[0];
+            menuContainer.style.display = 'flex';
+            menuContainer.style.justifyContent = 'center';
+
+            menuButtons.forEach(function(menuBut){
+                var menuDiv = document.createElement('div');
+                menuDiv.style.margin = '20px';
+                menuDiv.classList.add('button');
+                menuDiv.innerHTML=`
+                <button onclick = "location.href = '${menuBut.ref}';" class="menuButtons"> ${menuBut.name} </button>
+                `;
+                menuContainer.appendChild(menuDiv);
+            });
+
             var teams = [
                 {name:'Argentina', flagref:'images/ArgentinaFlag.png', ref:""},
             ]

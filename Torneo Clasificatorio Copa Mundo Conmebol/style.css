@@ -7,7 +7,10 @@ body {
 #partidos-container {
     max-width: 600px;
     margin: auto;
-    background-color: #d9ff02;
+    margin-top: 40px;
+    background-color: #6EB477;
+    color: black;
+    border: solid black;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
@@ -16,9 +19,11 @@ body {
 .partido {
     border: 1px solid #3F893F;
     padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    margin-bottom: 20px;
+    border-radius: 10px;
     background-color: #ffffff;
+    color: black;
+    border: solid black;
 }
 
 h1 {
@@ -102,4 +107,39 @@ tr:nth-child(even) td  {
 
 tr:hover td{
     background-color: #59656F;
+}
+
+
+.MenuContainer{
+
+    background-color: #D8FFDD;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: black;
+    border: solid black;
+    
+
+}
+
+.menubuttons {
+    background-color: transparent;
+    border: transparent;
+    padding: 0px 60px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 30px;
+  }
+
+.menubuttons:hover {
+    transform: scale(1.5);
+}
+
+.menubuttons:active{
+    background-color: #B3D3B7;
 }
